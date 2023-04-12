@@ -50,3 +50,34 @@
 }
 
 .youtube_redirect a:hover {background-color: #701f1f}
+
+/* define animation */
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+/* disable animation initially */
+.img1 {
+  opacity: 0;
+}
+
+.text_byimage div {
+  opacity: 0;
+}
+
+/* enable animation when triggered */
+.img1.animate {
+  animation: fadein 3s ease-in-out forwards;
+}
+
+.text_byimage div.animate {
+  animation: fadein 3s ease-in-out forwards;
+}
